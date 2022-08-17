@@ -1,0 +1,14 @@
+<div class="text-center">
+  <button
+    class="btn btn-primary mb-3"
+    type="button"
+    title="Load More"
+    *ngIf="hasMore; else messageNoMoreItems"
+  >
+    Load More
+  </button>
+
+  <ng-template #messageNoMoreItems>
+    <p class="text-center text-muted">No more items</p>
+  </ng-template>
+</div>

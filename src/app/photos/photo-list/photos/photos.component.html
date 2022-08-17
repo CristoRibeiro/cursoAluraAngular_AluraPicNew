@@ -1,0 +1,18 @@
+<div *ngIf="!photos.length" class="text-center mb-3 mt-3 text-muted">
+  Nenhuma foto encontrada com o filtro aplicado!
+</div>
+
+<ol class="list-unstyled">
+  <li class="row mb-3" *ngFor="let columns of rows">
+    <ap-cards
+      darkOnHoverDirective
+      *ngFor="let photo of columns"
+      [title]="photo.user | firstLeterUpperCase"
+      [description]="photo.description"
+      infoFooter="Last updated 3 mins ago"
+      class="col-2"
+    >
+      <ap-photo [photo]="photo"> </ap-photo>
+    </ap-cards>
+  </li>
+</ol>

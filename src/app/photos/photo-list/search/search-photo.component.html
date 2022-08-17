@@ -1,0 +1,17 @@
+<div class="text-center mb-3 mt-3">
+  <form>
+    <i
+      aria-hidden="true"
+      class="fa fa-search text-muted"
+      style="margin-right: 10px"
+    ></i>
+    <input
+      style="outline: 0px"
+      type="search"
+      placeholder="Search..."
+      autofocus
+      (keyup)="debounce.next(getValue($event))"
+      [value]="valueFilter"
+    />
+  </form>
+</div>
